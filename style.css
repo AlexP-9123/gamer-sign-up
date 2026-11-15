@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "Orbitron";
+  src: url("fonts/orbitron-variable.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px;
+  display: grid;
+  place-items: center;
+  background-color: black;
+  background-image: url("images/pattern-backdrop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: hsl(208 49% 92%);
+  font-family: "Orbitron", sans-serif;
+}
+
+.card {
+  width: min(1120px, 100%);
+  min-height: 580px;
+  padding: 44px 48px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 64px;
+  background: #05080c;
+  border: 1px solid #111a24;
+  box-shadow: 0 14px 35px rgb(0 0 0 / 30%);
+}
+
+.intro {
+  min-width: 0;
+}
+
+.logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin-bottom: 38px;
+}
+
+.title {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+  color: #e2eaf4;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: 1px;
+}
+
+.slashes {
+  color: #b7f02b;
+  letter-spacing: -8px;
+}
+
+.tagline,
+.status-heading,
+.status-row,
+.form-heading,
+form label,
+.login-prompt {
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  margin: 18px 0 24px;
+  color: #647082;
+}
+
+.divider {
+  height: 1px;
+  margin-bottom: 20px;
+  background: #18212b;
+}
+
+.status-heading,
+.status-row,
+.form-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-heading,
+.status-row {
+  color: #788495;
+}
+
+.unassigned {
+  margin: 8px 0 16px;
+  color: #dce4ef;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.status-row {
+  min-height: 22px;
+  gap: 10px;
+  font-size: 8px;
+}
+
+.rule {
+  flex: 1;
+  height: 1px;
+  background: #29313b;
+}
+
+.form-panel {
+  padding: 22px;
+  border: 1px solid #17222e;
+  background: #080e14;
+}
+
+.form-heading {
+  gap: 12px;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #1b2630;
+  color: #8b98a7;
+  font-size: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > label:not(.terms) {
+  margin: 12px 0 6px;
+  color: #8591a0;
+}
+
+form > input {
+  width: 100%;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #293541;
+  border-radius: 0;
+  outline: none;
+  background: #05090e;
+  color: #e2eaf4;
+  font: inherit;
+  font-size: 11px;
+}
+
+form > input:focus {
+  border-color: #b7f02b;
+}
+
+form > input::placeholder {
+  color: #657181;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+  color: #a0aaba;
+  font-size: 8px;
+}
+
+.terms input {
+  accent-color: #b7f02b;
+}
+
+a {
+  color: #b7f02b;
+}
+
+button {
+  min-height: 38px;
+  border: 0;
+  background: #b7f02b;
+  color: #101609;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.login-prompt {
+  margin: 14px 0 0;
+  text-align: center;
+  color: #7e8997;
+  font-size: 8px;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 18px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 28px 22px;
+  }
+
+  .logo {
+    margin-bottom: 24px;
+  }
+}
